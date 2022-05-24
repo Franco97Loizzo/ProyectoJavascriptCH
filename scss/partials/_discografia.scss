@@ -1,0 +1,36 @@
+body{
+    max-width: 1500px;
+    margin: auto;
+}
+
+.discos{
+    
+    @include flexBox (column, wrap, space-around);
+}
+
+.tituloDiscos{
+    margin: auto;
+}
+
+.caratulaDiscos{
+    width: 100%;
+    margin: 5px;
+    @include flexBox (row, wrap, space-around);
+    object-fit: cover;
+}
+
+.sencillos{
+    @include flexBox (column, wrap, space-around);
+}
+
+.tituloSencillos{
+    margin: auto;
+}
+
+.caratulaSencillos
+{
+    width: 100%;
+    margin: 5px;
+    @include flexBox (row, wrap, space-around);
+    object-fit: cover;
+}

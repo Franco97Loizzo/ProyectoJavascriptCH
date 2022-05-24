@@ -1,0 +1,18 @@
+%resetCss{
+    margin: 0;  
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    z-index: 1;
+    background-color:rgba(255, 255, 255, 0.568) ;
+    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+@mixin flexBox ($direction, $wrap, $justify){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+}

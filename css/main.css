@@ -1,0 +1,56 @@
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.568);
+  background-size: cover;
+  background-size: 100%;
+  background-attachment: fixed; }
+
+.anchDisc {
+  color: black;
+  list-style: none;
+  text-decoration: none;
+  font-size: 50px; }
+
+body {
+  max-width: 1500px;
+  margin: auto; }
+
+.discos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.tituloDiscos {
+  margin: auto; }
+
+.caratulaDiscos {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  object-fit: cover; }
+
+.sencillos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.tituloSencillos {
+  margin: auto; }
+
+.caratulaSencillos {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  object-fit: cover; }
