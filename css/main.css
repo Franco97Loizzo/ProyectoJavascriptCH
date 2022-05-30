@@ -1,22 +1,55 @@
-html {
+html, body {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 16px;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.568);
+  background-color: #181818;
   background-size: cover;
   background-size: 100%;
   background-attachment: fixed; }
 
+/* $letras(
+    
+) */
+.pDiscos {
+  color: rgba(217, 247, 210, 0.856);
+  margin: 0; }
+
 .anchDisc {
-  color: black;
+  color: white;
   list-style: none;
   text-decoration: none;
-  font-size: 50px; }
+  font-size: 50px;
+  text-align: center; }
+
+h1 {
+  color: #10c010;
+  text-align: center;
+  font-size: 500%; }
+
+header {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  top: 0; }
+
+.navbar {
+  text-align: center;
+  width: 100%;
+  background-image: linear-gradient(rgba(34, 104, 34, 0.815), rgba(0, 0, 0, 0));
+  font-size: 30px;
+  margin: 0; }
+  .navbar .nav-link {
+    text-decoration: none;
+    color: #10c010;
+    border: 5px; }
+
+main {
+  max-width: 1500px; }
 
 body {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto; }
 
 .discos {
@@ -26,7 +59,8 @@ body {
   justify-content: space-around; }
 
 .tituloDiscos {
-  margin: auto; }
+  margin: auto;
+  color: #c3cebd; }
 
 .caratulaDiscos {
   width: 100%;
@@ -37,6 +71,25 @@ body {
   justify-content: space-around;
   object-fit: cover; }
 
+.listaDiscos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.anchDiscos {
+  color: #555363;
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px; }
+
+.anchDiscos:hover {
+  text-decoration: underline; }
+
+.botonesDiscos {
+  width: 25%;
+  margin: auto; }
+
 .sencillos {
   display: flex;
   flex-direction: column;
@@ -44,7 +97,8 @@ body {
   justify-content: space-around; }
 
 .tituloSencillos {
-  margin: auto; }
+  margin: auto;
+  color: #c3cebd; }
 
 .caratulaSencillos {
   width: 100%;
@@ -54,3 +108,61 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   object-fit: cover; }
+
+.gridPadreDiscos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto; }
+
+.gridChildDiscos _.imagen {
+  grid-column: 2/3; }
+
+.gridChildDiscos _.description {
+  grid-column: 1/2; }
+
+.flexrowclass {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0%; }
+
+.flexcolclass {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto; }
+
+.descriptionDisco {
+  position: absolute;
+  width: auto;
+  margin: 0px; }
+
+.styleDiscos {
+  position: relative; }
+
+h3 {
+  font-size: 150%;
+  color: white; }
+
+h4 {
+  color: white; }
+
+.parraEnDiscos {
+  color: white; }
+
+.linkCompra {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 100%;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+.linkCompra:hover {
+  cursor: pointer;
+  text-decoration: underline; }

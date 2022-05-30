@@ -7,9 +7,9 @@ class Disco
     }
 }
 
-const disco1 = new Disco ("5K EP", 1000)
-const disco2 = new Disco ("Dark Deacon EP", 1500)
-const disco3 = new Disco ("Quest Pack EP", 1800)
+const disco1 = new Disco ("5K EP", 10)
+const disco2 = new Disco ("Dark Deacon EP", 15)
+const disco3 = new Disco ("Quest Pack EP", 18)
 
 class Sencillo
 {
@@ -20,11 +20,11 @@ class Sencillo
     }
 }
 
-const sencillo1 = new Sencillo ("Fallen One", 300)
-const sencillo2 = new Sencillo ("Warrior Path", 300)
-const sencillo3 = new Sencillo ("SwordMaster", 350)
-const sencillo4 = new Sencillo ("Lothric", 500)
-const sencillo5 = new Sencillo ("No Choice", 400)
+const sencillo1 = new Sencillo ("Fallen One", 3)
+const sencillo2 = new Sencillo ("Warrior Path", 3)
+const sencillo3 = new Sencillo ("SwordMaster", 4)
+const sencillo4 = new Sencillo ("Lothric", 5)
+const sencillo5 = new Sencillo ("No Choice", 4)
 
 
 const discos = [disco1,disco2,disco3]
@@ -116,7 +116,7 @@ function listarSencillos()
     })
 }
 
-function listarTodos()
+function listarTodos() //Ordenar por precios con DOM y .sort
 {
     console.log("Toda la discografia")
     musica.forEach((disco,sencillo)=>
@@ -128,6 +128,7 @@ function listarTodos()
 function comprarDiscoNombre()
 {
     let nombre = prompt("Escriba el nombre del disco a comprar")
+    localStorage.setItem("Discos a comprar", nombre)
     let comprar = discos.find((disco)=>disco.nombre.toLowerCase().indexOf(nombre)!==-1)
     console.log("Usted va a comprar")
     console.log(comprar);

@@ -1,0 +1,64 @@
+.gridPadreDiscos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+.gridChildDiscos{
+    _.imagen{
+        grid-column: 2/3;
+    }
+    _.description{
+        grid-column: 1/2;
+    }
+}
+
+.flexrowclass{
+    @include flexBox(row,wrap,space-around);
+    margin: 0;
+    padding: 0%;
+}
+
+.flexcolclass{
+    @include flexBox(column,wrap,space-around);
+    margin: auto;
+}
+
+.descriptionDisco{
+    position: absolute;
+    width: auto;
+    margin: 0px;
+}
+
+.styleDiscos{
+    position: relative;
+}
+
+h3{
+    font-size: 150%;
+    color: white;
+}
+
+h4{
+    color: white;
+}
+
+.parraEnDiscos{
+    color: white;
+}
+
+.linkCompra {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+}
+.linkCompra:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
