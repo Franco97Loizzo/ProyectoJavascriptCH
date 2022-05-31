@@ -1,8 +1,7 @@
 const bottonDarkD = document.getElementById("comprarDarkD");
 
 bottonDarkD.addEventListener("click",()=>{
-    /* comprarDarkD() */
-    alert("!!!")
+    comprarDarkD()
 })
 
 function comprarDarkD(){
