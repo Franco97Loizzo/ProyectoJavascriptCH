@@ -1,6 +1,21 @@
 html{
     @extend %resetCss;
 }
+body{
+    margin: auto;
+    @extend %resetCss;
+}
+
+.masterConteiner{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 0;
+}
 
 .pDiscos{
     color: rgba(217, 247, 210, 0.856);
@@ -29,19 +44,39 @@ header{
 }
 
 .navbar{
-    .nav-link{
-        text-decoration: none;
-        
-        color: rgb(16, 192, 16);
-        border: 5px;
-    }
-    text-align: center;
+    @include flexBox(row,wrap,space-around); 
     width: 100%;
     background-image: linear-gradient( rgba(34, 104, 34, 0.815),rgba(0, 0, 0, 0));
     font-size: 30px;
-    margin: 0;
-}
+    margin: auto;
+    .nav-link{
+        text-decoration: none;
+        color: rgb(16, 192, 16);
+        border: 5px;
+    }
+    .navbar-nav{
+        align-items: flex-start;
+        width: 75%;
+        margin: auto;
+    }
+    .carrito{
+        align-items: flex-end;
+        width: 12,5%;
+    }
+    .carritoIcono{
+        color: rgba(123, 90, 138, 0.87);
+        border: 10px black;
+        text-decoration: none;
+    }
+    .carritoIcono:hover{
+        color: rgb(155, 189, 161);
+    }
 
+}
+.fa,.fas{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
 main{
     max-width: 1500px;
 }

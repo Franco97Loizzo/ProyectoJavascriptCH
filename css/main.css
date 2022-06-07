@@ -12,6 +12,19 @@ html, body {
 /* $letras(
     
 ) */
+body {
+  margin: auto; }
+
+.masterConteiner {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index: 0; }
+
 .pDiscos {
   color: rgba(217, 247, 210, 0.856);
   margin: 0; }
@@ -35,26 +48,42 @@ header {
   top: 0; }
 
 .navbar {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 100%;
   background-image: linear-gradient(rgba(34, 104, 34, 0.815), rgba(0, 0, 0, 0));
   font-size: 30px;
-  margin: 0; }
+  margin: auto; }
   .navbar .nav-link {
     text-decoration: none;
     color: #10c010;
     border: 5px; }
+  .navbar .navbar-nav {
+    align-items: flex-start;
+    width: 75%;
+    margin: auto; }
+  .navbar .carrito {
+    align-items: flex-end;
+    width: 12,5%; }
+  .navbar .carritoIcono {
+    color: rgba(123, 90, 138, 0.87);
+    border: 10px black;
+    text-decoration: none; }
+  .navbar .carritoIcono:hover {
+    color: #9bbda1; }
+
+.fa, .fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
 
 main {
   max-width: 1500px; }
 
-body {
-  max-width: 1200px;
-  margin: auto; }
-
 .discos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
 
@@ -66,14 +95,14 @@ body {
   width: 100%;
   margin: 5px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   object-fit: cover; }
 
 .listaDiscos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
 
@@ -166,3 +195,57 @@ h4 {
 .linkCompra:hover {
   cursor: pointer;
   text-decoration: underline; }
+
+.cuadroCompra {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  bottom: 20rem;
+  z-index: 1001;
+  width: 500px;
+  height: 350px;
+  margin: auto;
+  background-color: white; }
+
+.divHead {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+.parraCompra {
+  font-size: 150%;
+  margin: 3%;
+  color: black; }
+
+.botonCerrar {
+  background-color: rgba(0, 0, 0, 0);
+  border: black;
+  color: black; }
+
+.botonCerrar:hover {
+  cursor: pointer; }
+
+.mainTable {
+  max-width: 500px; }
+
+.table {
+  background-color: rgba(161, 115, 170, 0.719);
+  margin: auto;
+  padding: 1%;
+  max-width: 500px; }
+
+.thChart {
+  font-size: 150%;
+  color: white; }
+
+.thx {
+  width: 1%; }
+
+.tdChart {
+  font-size: 150%;
+  width: 10%;
+  margin: auto;
+  color: aliceblue; }

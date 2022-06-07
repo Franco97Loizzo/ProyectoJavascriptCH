@@ -6,22 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/db72aa6046.js" crossorigin="anonymous"></script>
     <script defer src="../../scripts/boton.js"></script>
+    <script defer src="../../scripts/inputDiscos.js"></script>
+    <script defer src="../../scripts/main.js"></script>
+    <script defer src="../../scripts/discos-sencillos.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="navbar-nav">
-                <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+                <a class="nav-link" href="./index.html">Inicio</a>
                 <a class="nav-link" href="../discografia.html">Discografia</a>
                 <a class="nav-link" href="#">Pricing</a>
             </div>
+            <div class="carrito">
+                <a class="carritoIcono" href="../chart.html" id="anchor_carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
         </nav>
     </header>
-    <main class="gridPadreDiscos">
+    <main id="mainDisco" class="gridPadreDiscos masterConteiner">
         <section class="gridChildDiscos description">
             <div class="flexcolclass descriptionDisco">
-                <h3>5K EP</h3>
+                <h3 id="1">5K EP</h3>
                 <div class="styleDiscos">
                     <p class="parraEnDiscos">by <a href="../../index.html">Poisonouz</a></p>
                 </div>
@@ -35,7 +43,10 @@
                     <p class="parraEnDiscos">Esta seria una buena descripcion para el album</p>
                 </div>
                 <div class="styleDiscos">
-                    <p class="parraEnDiscos"><button id="comprar5K" class="linkCompra">Compra el Album </button> $10USD o más</p>
+                    <p class="parraEnDiscos"><button onclick="cambiarFondo(`black`);" id="comprar5K" class="linkCompra">Compra el Album </button> $10USD o más</p>
+                </div>
+                <div >
+                    <p><button class="linkCompra agregarCarrito" style="font-size:90%;">Agregar al Carrito</button></p>
                 </div>
             </div>
         </section>
@@ -49,5 +60,25 @@
     <footer>
 
     </footer>
+    <div id="ventanaCompra" style="display:none;" class="cuadroCompra" role="dialog">
+        <div class="divHead">
+            <p class="parraCompra"></p>
+            <button id="cerrarCuadroCompra" class="botonCerrar">X</button>
+        </div>
+        <div>
+            <p>mensaje</p>
+        </div>
+        <div class="divPrecio">
+            <label>Cuanto pagaras:</label>
+            <span>
+                <span>$</span>
+                <input id="precioUsuario" type="">
+                <span>USD ($5 or more)</span>
+            </span>
+            <div id="mensajeDePago">
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

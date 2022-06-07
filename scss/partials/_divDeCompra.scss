@@ -1,0 +1,30 @@
+.cuadroCompra{
+    position: relative;
+    @include flexBox(column,wrap,space-between);
+    bottom: 20rem;
+    z-index: 1001;
+    width: 500px;
+    height: 350px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.divHead{
+    @include flexBox(row,wrap,space-evenly);
+}
+
+.parraCompra{
+    font-size: 150%;
+    margin: 3%;
+    color: rgb(0, 0, 0);
+}
+
+.botonCerrar{
+
+    background-color: rgba(0, 0, 0, 0);
+    border:rgb(0, 0, 0);
+    color: black;
+}
+.botonCerrar:hover{
+    cursor: pointer;
+}

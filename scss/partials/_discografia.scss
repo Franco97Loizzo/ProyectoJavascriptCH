@@ -1,12 +1,6 @@
-body{
-    max-width: 1200px;
-    margin: auto;
-    @extend %resetCss;
-}
-
 .discos{
     
-    @include flexBox (column, wrap, space-around);
+    @include flexBox (row, wrap, space-around);
 }
 
 .tituloDiscos{
@@ -17,12 +11,12 @@ body{
 .caratulaDiscos{
     width: 100%;
     margin: 5px;
-    @include flexBox (row, wrap, space-around);
+    @include flexBox (column, wrap, space-around);
     object-fit: cover;
 }
 
 .listaDiscos{
-    @include flexBox (column,wrap,space-around)
+    @include flexBox (row,wrap,space-around)
 }
 
 .anchDiscos{
