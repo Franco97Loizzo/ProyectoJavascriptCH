@@ -50,8 +50,24 @@ botones.forEach(elemento => {
     elemento.addEventListener("click", anadirCarrito)
 })
 
-function anadirCarrito(e) {
 
+function anadirCarrito(e) {
+    Toastify({
+        text: "Se agrego un producto al carrito",
+        duration: 1500,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        offset: {
+            x: 5,
+            y: 70 
+        },
+        stopOnFocus: true,
+        style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){}
+    }).showToast();
     let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
 
     if (carritoLocalStorage){
@@ -68,12 +84,14 @@ function anadirCarrito(e) {
     if (index== -1){
         const producto = new ProductoCarrito(nombre, precio, imagen,  id);
         carrito.push(producto);
+        
     }else{
         carrito[index].cantidad++;
         carrito[index].subtotal = carrito[index].precio * carrito[index].cantidad;
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito))
+    
 } 
 
 function carritoNav(arrayCarrito){

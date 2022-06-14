@@ -21,6 +21,7 @@ botonesEliminar.forEach(elemento => {
 })
 
 function eliminarProducto(e){
+    swal("Eliminaste los productos",":c","error")
     let index = carrito.findIndex(producto => producto.id == e.target.id)
     carrito.splice(index, 1);
     e.target.parentNode.parentNode.remove();
