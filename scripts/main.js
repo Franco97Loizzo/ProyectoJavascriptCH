@@ -31,11 +31,37 @@ function rellenarPagina(arrayProductos) {
                     <h2 class="pDiscos">${producto.nombre}</h2>
                     <p class="pDiscos">$ <strong>${producto.precio}</strong></p>
                     <button class="btn btn-primary anadirCarrito linkCompra">Añadir al Carrito</button>
+                    <button id="conversor">Convertir Precio a ARS</button>
                 </div>
             </div>
         </div>`
         divContainer.appendChild(div)
-    }
+
+              //fetch conversor de usd a ars
+        let botonConvertidor = document.getElementById("conversor");
+
+        let myHeaders = new Headers();
+        myHeaders.append("apikey", "DRG0sT8MJqXupKqaHowvkkPPq3NdZgrg");
+
+        let requestOptions = {
+            method: 'GET',
+            redirect: 'follow',
+            headers: myHeaders
+        };
+
+        fetch(`https://api.apilayer.com/exchangerates_data/convert?to=ARS&from=USD&amount=${producto.precio}` , requestOptions)
+            .then(response => response.json())
+            .then((result) => 
+                {
+                    console.log(result)
+                    console.log(result.result)
+                botonConvertidor.addEventListener("click", ()=>{
+                    swal("La conversion es $ARS " + result.result);
+                })
+            })
+            .catch(error => console.log('error', error))
+        }
+    
     let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
     if(carritoLocalStorage){
         carritoNav(carritoLocalStorage)
@@ -89,21 +115,16 @@ function anadirCarrito(e) {
         carrito[index].cantidad++;
         carrito[index].subtotal = carrito[index].precio * carrito[index].cantidad;
     }
-
     localStorage.setItem("carrito", JSON.stringify(carrito))
-    
 } 
 
 function carritoNav(arrayCarrito){
-
     let textoCarrito = document.getElementById("anchor_carrito");
-
     let totalProductos = 0;
-
-    for(let discosSencillo of arrayCarrito){
-        totalProductos += discosSencillo.cantidad;
+    for(let producto of arrayCarrito){
+        totalProductos += producto.cantidad;
     }
-
     textoCarrito.innerHTML = "";
     textoCarrito.innerHTML = `<p>Carrito (${totalProductos})</p>`
 }
+
