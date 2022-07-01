@@ -1,5 +1,4 @@
 .discos{
-    
     @include flexBox (row, wrap, space-around);
 }
 
@@ -16,7 +15,8 @@
 }
 
 .listaDiscos{
-    @include flexBox (row,wrap,space-around)
+    @include flexBox (row,wrap,space-around);
+    margin: 1px;
 }
 
 .anchDiscos{

@@ -2,13 +2,14 @@ let carrito = [];
 
 class ProductoCarrito{
 
-    constructor(nombre, precio, imagen, id, subtotal) {
+    constructor(nombre, precio, imagen, id, subtotal, total) {
         this.nombre = nombre;
         this.precio = precio;
         this.imagen = imagen;
         this.cantidad = 1;
         this.id = id;
-        this.subtotal = precio;
+        this.subtotal = precio
+        this.total = total;
     }
 }
 
@@ -22,17 +23,12 @@ function rellenarPagina(arrayProductos) {
         div.classList = "col-4 mt-3"
 
         div.innerHTML = `
-        <div class="discos">
-            <div class="caratulaDiscos>
-                <div class="listaDiscos">
-                    <img src="${producto.imagen}" witdh="150px" height="150px" alt="${producto.id}">
-                </div>
-                <div class="card-body tituloDiscos">
-                    <h2 class="pDiscos">${producto.nombre}</h2>
-                    <p class="pDiscos">$ <strong>${producto.precio}</strong></p>
-                    <button class="btn btn-primary anadirCarrito linkCompra">Añadir al Carrito</button>
-                    <button id="conversor">Convertir Precio a ARS</button>
-                </div>
+        <div class="card discos listaDiscos">
+            <img src="${producto.imagen}" alt="${producto.id}" witdh="150px" height="150px">
+            <div class="card-body tituloDiscos">
+                <h2 class="pDiscos">${producto.nombre}</h2>
+                <p class="pDiscos">$ <strong>${producto.precio}</strong></p>
+                <button class="linkCompra anadirCarrito">Añadir al Carrito</button>
             </div>
         </div>`
         divContainer.appendChild(div)
@@ -113,7 +109,7 @@ function anadirCarrito(e) {
         
     }else{
         carrito[index].cantidad++;
-        carrito[index].subtotal = carrito[index].precio * carrito[index].cantidad;
+        carrito[index].subtotal = carrito[index].precio * carrito[index].cantidad
     }
     localStorage.setItem("carrito", JSON.stringify(carrito))
 } 
