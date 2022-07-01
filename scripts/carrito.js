@@ -19,7 +19,7 @@ function rellenarCarrito(arrayCarrito)
     })
     
     let myHeaders = new Headers();
-    myHeaders.append("apikey", "DRG0sT8MJqXupKqaHowvkkPPq3NdZgrg");
+    myHeaders.append("apikey", "YvzazUfgV8IRMgYGMP1RSREwfTy5PLty");
 
     let requestOptions = {
         method: 'GET',
